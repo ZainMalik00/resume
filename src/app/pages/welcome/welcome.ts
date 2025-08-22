@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NzTabsModule  } from 'ng-zorro-antd/tabs';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
   selector: 'app-welcome',
-  imports: [NzTabsModule, NzCardModule],
+  imports: [NzTabsModule, NzCardModule, NzIconModule],
   templateUrl: './welcome.html',
   styleUrl: './welcome.css'
 })
