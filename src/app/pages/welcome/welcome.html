@@ -1,0 +1,35 @@
+<p>Hey, my name is Zain Malik. I like to make things on the internet.</p>
+<p> I'm a Software Engineer that is currently designing AI centric products for BMC Software.</p>
+
+<div style="display: flex;">
+    <nz-tabs [nzTabPosition]="'left'">
+        @for (experience of WorkExperienceList; track $index){
+            <nz-tab nzTitle="{{experience.company}}">
+                @if (experience.hasMultiple) {
+                    @for (innerExperience of experience.title; track $index){
+                    <nz-card nzTitle="{{experience.title[$index]}}">
+                        <p>{{experience.duration[$index]}}</p>
+                        <ul>
+                            @for (description of experience.description[$index]; track $index) {
+                                <li>{{description}}</li>
+                            }
+                        </ul>
+                    </nz-card>
+                    }
+                } @else {
+                    <nz-card nzTitle="{{experience.title}}">
+                        <p>{{experience.duration}}</p>
+                        <ul>
+                            @for (description of experience.description; track $index) {
+                                <li>{{description}}</li>
+                            }
+                        </ul>
+                    </nz-card>
+                }
+            </nz-tab>
+        }
+    </nz-tabs>
+</div>
+
+<p>Reach out to me on any of the following socials, I'm always open to hearing new ideas and opportunities! If you would like to see more, check out my github for more cool projects or my codepen for some of my random creations.</p>
+    
