@@ -1,50 +1,10 @@
-<section class="intro">
-  <p>Hey, my name is Zain Malik, I like to build solutions.</p>
-  <p>I'm a Software Engineer with over 4 years of experience building solutions across various industries. Currently, I'm designing AI-centric products at BMC Software, where I work on LLM tools and automation systems.</p>
-  <p>Throughout my career, I've worked on multiple full-stack applications, from backend APIs to modern frontend interfaces. I've contributed to projects in satellite communications, financial services, and video conferencing platforms. I'm passionate about creating efficient, automated solutions and turning innovative ideas into impactful products.</p>
-</section>
-
-<section class="experience-section">
-<p>My Work Experience</p>
-  <div style="display: flex;">
-    <nz-tabs [nzTabPosition]="'left'">
-      @for (experience of WorkExperienceList; track $index){
-        <nz-tab nzTitle="{{experience.company}}">
-          @if (experience.hasMultiple) {
-            @for (innerExperience of experience.title; track $index){
-              <nz-card nzTitle="{{experience.title[$index]}}">
-                <p>{{experience.duration[$index]}}</p>
-                <ul>
-                  @for (description of experience.description[$index]; track $index) {
-                    <li>{{description}}</li>
-                  }
-                </ul>
-              </nz-card>
-            }
-          } @else {
-            <nz-card nzTitle="{{experience.title}}">
-              <p>{{experience.duration}}</p>
-              <ul>
-                @for (description of experience.description; track $index) {
-                  <li>{{description}}</li>
-                }
-              </ul>
-            </nz-card>
-          }
-        </nz-tab>
-      }
-    </nz-tabs>
-  </div>
-</section>
-
-<section class="contact">
-  <p>Reach out to me on any of the following socials, I'm always open to hearing new ideas and opportunities! If you would like to see more, check out my github for more cool projects or my codepen for some of my random creations.</p>
-
-  <div class="social-links">
-    <a href="mailto:zmmalik00@gmail.com"><nz-icon nzType="mail" nzTheme="outline" /> Mail</a>
-    <a href="https://github.com/ZainMalik00" target="_blank"><nz-icon nzType="github" nzTheme="outline" /> GitHub</a>
-    <a href="https://www.linkedin.com/in/zainmalik00/" target="_blank"><nz-icon nzType="linkedin" nzTheme="outline" /> LinkedIn</a>
-    <a href="https://codepen.io/zainmalik00" target="_blank"><nz-icon nzType="codepen" nzTheme="outline" /> CodePen</a>
-  </div>
-</section>
+<div id="about-me-section">
+    <app-about-me></app-about-me>
+</div>
+<div id="experience-section">
+    <app-experience></app-experience>
+</div>
+<div id="contact-section">
+    <app-contact></app-contact>
+</div>
 

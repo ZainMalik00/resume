@@ -1,0 +1,32 @@
+<section class="experience-section">
+    <p>My Work Experience</p>
+    <div style="display: flex;">
+        <nz-tabs [nzTabPosition]="'left'">
+        @for (experience of WorkExperienceList; track $index){
+            <nz-tab nzTitle="{{experience.company}}">
+            @if (experience.hasMultiple) {
+                @for (innerExperience of experience.title; track $index){
+                <nz-card nzTitle="{{experience.title[$index]}}">
+                    <p>{{experience.duration[$index]}}</p>
+                    <ul>
+                    @for (description of experience.description[$index]; track $index) {
+                        <li>{{description}}</li>
+                    }
+                    </ul>
+                </nz-card>
+                }
+            } @else {
+                <nz-card nzTitle="{{experience.title}}">
+                <p>{{experience.duration}}</p>
+                <ul>
+                    @for (description of experience.description; track $index) {
+                    <li>{{description}}</li>
+                    }
+                </ul>
+                </nz-card>
+            }
+            </nz-tab>
+        }
+        </nz-tabs>
+    </div>
+</section>

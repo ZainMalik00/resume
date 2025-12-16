@@ -1,0 +1,54 @@
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  p:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #001529;
+    margin-bottom: 1rem;
+  }
+
+.experience-section {
+    margin: 3rem 0;
+    min-height: 400px;
+  }
+  
+  /* Card Styling Enhancements */
+  nz-card {
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  nz-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  nz-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  nz-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+  
+  nz-card li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Tabs Styling Enhancement */
+  nz-tabs {
+    width: 100%;
+  }
+  
+  

@@ -1,0 +1,13 @@
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  p:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #001529;
+    margin-bottom: 1rem;
+  }
