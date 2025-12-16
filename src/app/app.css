@@ -3,19 +3,38 @@
 }
 
 .app-layout {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+nz-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #001529;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
 }
 
 .top-nav {
   line-height: 64px;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-  float: left;
   height: 64px;
-  padding-right: 24px;
   line-height: 64px;
-  background: #001529;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
@@ -27,12 +46,17 @@
 
 .logo h1 {
   display: inline-block;
-  margin: 0 0 0 15px;
+  margin: 0;
   color: #fff;
   font-weight: 600;
   font-size: 20px;
   font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
   vertical-align: middle;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
 
 nz-content {
@@ -42,5 +66,5 @@ nz-content {
 .inner-content {
   padding: 24px;
   background: #fff;
-  height: 100%;
+  height: fit-content;
 }
