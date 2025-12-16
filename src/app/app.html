@@ -2,21 +2,35 @@
   <nz-header>
     <div class="header-content">
       <div class="logo">
-        <a>
+        <a href="#about-me-section">
           <!-- <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo"> -->
           <h1>Zain Malik</h1>
         </a>
       </div>
       <ul nz-menu class="top-nav" nzTheme="dark" nzMode="horizontal">
-        <li nz-menu-item routerLinkActive="ant-menu-item-selected" routerLink="/welcome">About Me</li>
-        <li nz-menu-item>Experience</li>
-        <li nz-menu-item>Contact</li>
+        <li nz-menu-item>
+          <a href="#about-me-section">About Me</a>
+        </li>
+        <li nz-menu-item>
+          <a href="#experience-section">Experience</a>
+        </li>
+        <li nz-menu-item>
+          <a href="#contact-section">Contact</a>
+        </li>
       </ul>
     </div>
   </nz-header>
   <nz-content>
     <div class="inner-content">
-      <router-outlet></router-outlet>
+      <div id="about-me-section">
+        <app-about-me></app-about-me>
+      </div>
+      <div id="experience-section">
+        <app-experience></app-experience>
+      </div>
+      <div id="contact-section">
+        <app-contact></app-contact>
+      </div>
     </div>
   </nz-content>
 </nz-layout>

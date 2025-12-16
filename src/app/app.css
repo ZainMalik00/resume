@@ -14,7 +14,7 @@ nz-header {
   background: #001529;
   position: fixed;
   width: 100%;
-
+  z-index: 10;
 }
 
 .header-content {
@@ -70,7 +70,9 @@ nz-content {
 }
 
 .inner-content {
-  padding: 24px;
+  padding: 2rem;
+  max-width: 80vw;
+  margin: 0 auto;
   background: #fff;
   height: fit-content;
 }

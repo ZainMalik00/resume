@@ -1,6 +1,6 @@
 <section class="experience-section">
     <p>My Work Experience</p>
-    <div style="display: flex;">
+    <div id="experience-tabs">
         <nz-tabs [nzTabPosition]="'left'">
         @for (experience of WorkExperienceList; track $index){
             <nz-tab nzTitle="{{experience.company}}">

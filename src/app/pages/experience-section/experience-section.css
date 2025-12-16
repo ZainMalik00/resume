@@ -17,6 +17,13 @@ p {
     min-height: 400px;
   }
   
+  #experience-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
   /* Card Styling Enhancements */
   nz-card {
     margin-bottom: 1rem;
@@ -48,7 +55,7 @@ p {
   
   /* Tabs Styling Enhancement */
   nz-tabs {
-    width: 100%;
+    width: 70%;
   }
   
   
