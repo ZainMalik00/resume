@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NzTabsModule  } from 'ng-zorro-antd/tabs';
 import { NzCardModule } from 'ng-zorro-antd/card';
 
@@ -9,6 +9,13 @@ import { NzCardModule } from 'ng-zorro-antd/card';
   styleUrl: './experience-section.css'
 })
 export class ExperienceSection {
+  
+  tabPosition: 'left' | 'top' = window.innerWidth <= 992 ? 'top' : 'left';
+
+  @HostListener('window:resize')
+  onResize() {
+    this.tabPosition = window.innerWidth <= 992 ? 'top' : 'left';
+  }
 
   WorkExperienceList = [
     {

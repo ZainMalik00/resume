@@ -1,7 +1,7 @@
 <section class="experience-section">
-    <p style="margin-left: 15%">My Work Experience</p>
+    <p id="title">My Work Experience</p>
     <div id="experience-tabs">
-        <nz-tabs [nzTabPosition]="'left'">
+        <nz-tabs [nzTabPosition]="tabPosition">
         @for (experience of WorkExperienceList; track $index){
             <nz-tab nzTitle="{{experience.company}}">
             @if (experience.hasMultiple) {
