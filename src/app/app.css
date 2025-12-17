@@ -3,8 +3,8 @@
 }
 
 .app-layout {
-  min-height: 100vh;
-  max-height: fit-content;
+  min-height: calc(100vh - 74px);
+  max-height: 100vh;
 }
 
 nz-header {
@@ -12,7 +12,7 @@ nz-header {
   align-items: center;
   justify-content: center;
   background: #001529;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 10;
 }
@@ -65,8 +65,9 @@ nz-header {
 }
 
 nz-content {
-  margin-top: 64px;
-  padding: 24px 50px;
+    scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .inner-content {
@@ -75,4 +76,22 @@ nz-content {
   margin: 0 auto;
   background: #fff;
   height: fit-content;
+
+}
+
+.inner-content div {
+  padding-top: 5vw;
+  padding-bottom: 1vw;
+}
+
+#about-me-section {
+  scroll-snap-align: start;
+}
+
+#experience-section {
+  scroll-snap-align: center;
+}
+
+#contact-section {
+  scroll-snap-align: end;
 }
