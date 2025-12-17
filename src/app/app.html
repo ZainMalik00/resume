@@ -7,17 +7,37 @@
           <!-- <h1>Zain Malik</h1> -->
         </a>
       </div>
-      <ul nz-menu class="top-nav" nzTheme="dark" nzMode="horizontal">
-        <li nz-menu-item>
-          <a href="#about-me-section">About Me</a>
-        </li>
-        <li nz-menu-item>
-          <a href="#experience-section">Experience</a>
-        </li>
-        <li nz-menu-item>
-          <a href="#contact-section">Contact</a>
-        </li>
-      </ul>
+      @if (this.menuType == 'expanded') {      
+        <ul nz-menu class="top-nav" nzTheme="dark" nzMode="horizontal">
+          <li nz-menu-item>
+            <a href="#about-me-section">About Me</a>
+          </li>
+          <li nz-menu-item>
+            <a href="#experience-section">Experience</a>
+          </li>
+          <li nz-menu-item>
+            <a href="#contact-section">Contact</a>
+          </li>
+        </ul>
+      }
+      @else {
+        <a nz-dropdown [nzDropdownMenu]="menu">
+          <nz-icon nzType="menu" nzTheme="outline" />
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item>
+              <a href="#about-me-section">About Me</a>
+            </li>
+            <li nz-menu-item>
+              <a href="#experience-section">Experience</a>
+            </li>
+            <li nz-menu-item>
+              <a href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </nz-dropdown-menu>
+      }
     </div>
   </nz-header>
   <nz-content>

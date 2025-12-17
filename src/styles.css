@@ -1,10 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 #about-me-section,
 #experience-section,
 #contact-section {
   scroll-margin-top: 64px;
+}
+
+.ant-dropdown-menu-item a,
+.ant-dropdown-menu-item {
+  color: #001529 !important;
+}
+
+.ant-dropdown-menu-item:hover a,
+.ant-dropdown-menu-item:hover {
+  color: #001529 !important;
+}
+
+.ant-dropdown-menu-item-selected a,
+.ant-dropdown-menu-item-selected {
+  color: #001529 !important;
 }
