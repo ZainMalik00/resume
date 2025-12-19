@@ -1,14 +1,16 @@
 p {
-    font-size: 1.1rem;
+    font-size: var(--font-md);
     line-height: 1.8;
-    color: #333;
+    color: var(--color-card-text);
+    color: light-dark(var(--color-card-text), var(--color-card-text-dark));
     margin-bottom: 1.5rem;
   }
   
   p:first-child {
-    font-size: 2.5rem;
+    font-size: var(--font-xxl);
     font-weight: 500;
-    color: #001529;
+    color: var(--color-nav-text);
+    color: light-dark(var(--color-nav-text), var(--color-nav-text-dark));
     margin-bottom: 1rem;
   }
 
@@ -31,17 +33,25 @@ p {
   /* Card Styling Enhancements */
   nz-card {
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
     transition: box-shadow 0.3s ease;
+    background: var(--color-bg);
+    background: light-dark(var(--color-bg), var(--color-bg-dark));
   }
   
   nz-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
   }
   
+  nz-card ::ng-deep .ant-card-head {
+    color: var(--color-nav-text);
+    color: light-dark(var(--color-nav-text), var(--color-nav-text-dark));
+  }
+
   nz-card p {
-    color: #666;
-    font-size: 0.95rem;
+    color: var(--color-card-subtext);
+    color: light-dark(var(--color-card-subtext), var(--color-card-subtext-dark));
+    font-size: var(--font-sm);
     margin-bottom: 1rem;
     font-style: italic;
   }
@@ -54,12 +64,15 @@ p {
   nz-card li {
     margin-bottom: 0.75rem;
     line-height: 1.6;
-    color: #444;
+    color: var(--color-card-text);
+    color: light-dark(var(--color-card-text), var(--color-card-text-dark));
   }
   
   /* Tabs Styling Enhancement */
   nz-tabs {
     width: 70%;
+    color: var(--color-nav-text);
+    color: light-dark(var(--color-nav-text), var(--color-nav-text-dark));
   }
   
   @media (max-width: 992px) {

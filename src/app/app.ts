@@ -34,4 +34,9 @@ export class App {
     this.menuType = window.innerWidth <= 768 ? 'dropdown' : 'expanded';
   }
 
+  toggleTheme(event: Event) {
+    const isDark = document.body.style.colorScheme === 'dark';
+    document.body.style.colorScheme = isDark ? 'light' : 'dark';
+  }
+
 }
