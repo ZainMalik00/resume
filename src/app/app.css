@@ -26,6 +26,25 @@ nz-header {
   gap: 0.5rem;
 }
 
+.header-dropdown-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-content button {
+  /* background-color: var(--color-header);
+  border-color: var(--color-header); */
+  height: 64px;
+  
+}
+
+.header-content button:hover{
+  /* background-color: var(--color-header);
+  border-color: var(--color-header); */
+  background-color: var(--color-accent);
+  
+}
+
 .top-nav {
   line-height: 64px;
   display: flex;
