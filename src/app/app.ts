@@ -31,7 +31,7 @@ export class App {
 
   menuType: 'expanded' | 'dropdown' = window.innerWidth <= 768 ? 'dropdown' : 'expanded';
   themeType = signal(document.body.style.colorScheme === 'dark' ? 'dark' : 'light');
-
+  backgroundImageType = signal(document.body.style.colorScheme === 'dark' ? 'url(dark-bkg.gif)' : 'none') 
 
   @HostListener('window:resize')
   onResize() {
@@ -42,6 +42,7 @@ export class App {
     const isDark = document.body.style.colorScheme === 'dark';
     document.body.style.colorScheme = isDark ? 'light' : 'dark';
     this.themeType.set(document.body.style.colorScheme)
+    this.backgroundImageType.set(document.body.style.colorScheme === 'dark' ? 'url(dark-bkg.gif)' : 'none')
   }
 
 }
